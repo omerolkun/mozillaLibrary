@@ -4,23 +4,23 @@
 {% block content %}
 
 <h4>Author: {{author.first_name}}  {{author.last_name}}</h2>
-<br><br><br><br><br>
-
-<p>{{author.book_set.all.count}} book is founded...</p>
-
-
-
-
-
 <br><br>
-{{author.book_set.all.count}}
 
+{% if author.book_set.all.count == 1 %}
+    <p>1 book is founded...</p>
+{% else %}
+    <p>{{author.book_set.all.count}} books are founded...</p>
+{% endif %}
+
+
+
+<br>
 <br>---<br>
 {% for x in author.book_set.all %}
-    {{x.get_absolute_url}}
     <strong>Title :</strong> <a href= "{{x.get_absolute_url}}"> {{x.title}} </a>({{x.bookinstance_set.all.count}})<br>
     <strong>Summary </strong>:<br> {{x.summary}}<br>
 
     <br>
 {% endfor %}
+
 {% endblock %}
