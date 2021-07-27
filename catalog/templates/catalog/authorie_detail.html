@@ -3,7 +3,12 @@
 
 {% block content %}
 
-<h2>Author name :{{author}}
-</h2>
+<h4>Author: {{author.first_name}}  {{author.last_name}}</h2>
+<br><br><br><br><br>
+
+<p>{{author.book_set.all.count}} book is founded...</p>
+
+
+
 
 {% endblock %}
