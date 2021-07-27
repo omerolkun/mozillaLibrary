@@ -55,3 +55,4 @@ class AuthorListView(generic.ListView):
 class AuthorDetaielView(generic.DetailView):
     model = Author
     template_name = 'catalog/authorie_detail.html'
+    

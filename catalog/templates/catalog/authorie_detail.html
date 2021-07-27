@@ -3,7 +3,22 @@
 
 {% block content %}
 
-<h2>Author name :{{author}}
-</h2>
+<h2>Author name :{{author}}</h2>
+<h3>The books of the {{author.first_name}} {{author.last_name}} are :</h3>
+{% for bokname in author.book_set.all %}
+    {{bokname.title}}
+    <br>
+{% endfor %}
 
+
+<br><br>
+{{author.book_set.all.count}}
+
+<br>---<br>
+{% for x in author.book_set.all %}
+    <strong>Title :</strong> {{x.title}}<br>
+    <strong>Summary </strong>:<br> {{x.summary}}<br>
+
+    <br>
+{% endfor %}
 {% endblock %}
