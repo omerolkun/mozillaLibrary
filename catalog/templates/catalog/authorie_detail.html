@@ -16,7 +16,8 @@
 
 <br>---<br>
 {% for x in author.book_set.all %}
-    <strong>Title :</strong> {{x.title}}<br>
+    {{x.get_absolute_url}}
+    <strong>Title :</strong> <a href= "{{x.get_absolute_url}}"> {{x.title}} </a><br>
     <strong>Summary </strong>:<br> {{x.summary}}<br>
 
     <br>
