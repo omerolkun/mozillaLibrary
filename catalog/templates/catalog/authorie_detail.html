@@ -3,12 +3,13 @@
 
 {% block content %}
 
-<h2>Author name :{{author}}</h2>
-<h3>The books of the {{author.first_name}} {{author.last_name}} are :</h3>
-{% for bokname in author.book_set.all %}
-    {{bokname.title}}
-    <br>
-{% endfor %}
+<h4>Author: {{author.first_name}}  {{author.last_name}}</h2>
+<br><br><br><br><br>
+
+<p>{{author.book_set.all.count}} book is founded...</p>
+
+
+
 
 
 <br><br>

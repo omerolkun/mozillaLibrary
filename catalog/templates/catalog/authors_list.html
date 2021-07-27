@@ -3,7 +3,6 @@
 {% block content %}
 <h1>Authors</h1>
 <ul>
-    
     {% for au in object_list %}
         <li><a href="{{au.pk}}" >{{au.first_name }} {{au.last_name}}   </a></li>
     {% endfor %}
