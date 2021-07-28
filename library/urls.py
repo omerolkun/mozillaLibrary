@@ -8,5 +8,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
     path('',views.beg127),
+    path('accounts/',include('django.contrib.auth.urls')),
 
 ]
